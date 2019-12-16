@@ -5,7 +5,7 @@ class HashMap {
         this._capacity = initialCapacity;
         this._deleted = 0;
     }
-    static _hasString(string){
+    static _hashString(string){
         let hash = 5381;
         for(let i = 0; i < string.length; i++){
             hash = (hash << 5) + hash + string.charCodeAt(i);
@@ -21,7 +21,7 @@ class HashMap {
         }
         // Find the slot where this key should be in.
         const index = this._findSlot(key);
-        if(!this._hasTable[index]){
+        if(!this._hashTable[index]){
             this.length++;
         }
         this._hashTable[index] = {
@@ -44,7 +44,7 @@ class HashMap {
 
         for(let i = 0; i < start + this._capacity; i++){
             const index = i % this._capacity;
-            const slot = this._hasTable[index];
+            const slot = this._hashTable[index];
             if(slot === undefined || (slot.key === key &&!slot.DELETED)){
                 return index;
             }
@@ -77,6 +77,4 @@ class HashMap {
     }
 }
 
-
-
-exports.module = HashMap;
+module.exports = HashMap;
