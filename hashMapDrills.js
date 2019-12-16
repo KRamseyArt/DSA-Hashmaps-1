@@ -61,8 +61,7 @@ main();
 
 
 
-//Question 04
-//IS THIS CORRECT?!?!???!
+//Question 04:
 
 function removeDuplicates(string) {
     let hash = new hashMap();
@@ -75,4 +74,42 @@ function removeDuplicates(string) {
     }
     console.log(results);
 }
-removeDuplicates('google');
+// removeDuplicates('google');
+
+
+//Question 05:
+
+function palindrome(string) {
+    let hash = new hashMap();
+    for (let i = 0; i < string.length; i++) {
+        hash.set(string[i],i);
+    }
+    let count = 0;
+    for(let i = 0; i < string.length; i++) {
+        if(hash.get(string[i]) !== i) {
+            count--;
+        } else {
+            count++;
+        }
+    } if (count > 1) {
+        return false;
+    } else {
+        return true;
+    }
+}
+console.log(palindrome('acecarr'));
+console.log(palindrome('north'));
+
+
+
+//Question 06:
+
+// function anagram(array) {
+//     let hash = new hashMap();
+//     for(let i=0; i < array.length; i++) {
+//         let permutations = array[i];
+//         console.log(permutations);
+//     }
+// }
+
+// anagram(['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race']);
