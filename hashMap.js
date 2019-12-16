@@ -1,9 +1,11 @@
 class HashMap {
-    constructor(initialCapacity = 8){
+    constructor(initialCapacity = 8, SIZE_RATIO=3, MAX_LOAD_RATIO=0.5){
         this.length = 0;
         this._hashTable = [];
         this._capacity = initialCapacity;
         this._deleted = 0;
+        this._SIZE_RATIO = SIZE_RATIO;
+        this._MAX_LOAD_RATIO = MAX_LOAD_RATIO;
     }
     static _hashString(string){
         let hash = 5381;

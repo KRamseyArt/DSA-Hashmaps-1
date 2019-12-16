@@ -2,8 +2,8 @@ let hashMap = require('./hashMap');
 
 function main(){
     let lotr = new hashMap();
-    lotr.MAX_LOAD_RATIO = 0.5;
-    lotr.SIZE_RATION = 3;
+    hashMap.MAX_LOAD_RATIO = 0.5;
+    hashMap.SIZE_RATIO = 3;
     lotr.set('Hobbit','Bilbo');
     lotr.set('Hobbit', 'Frodo');
     lotr.set('Wizard','Gandolf');
@@ -22,5 +22,11 @@ function main(){
 
 main();
 // Question 01
-// Some items are missing, likely due to collision
+// Some items are missing, likely due to exact keys overwriting the values
 // Found the second inputted value rather than the first
+
+// Question 02
+// Output is going to be 20,10
+
+
+// Question 03
