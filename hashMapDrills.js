@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 let hashMap = require('./hashMap');
 
 function main(){
@@ -16,15 +17,15 @@ function main(){
     lotr.set('HalfElven','Arwen');
     lotr.set('Ent','Treebeard');
     //5, 28, 19, 15, 20, 33, 12, 17, 10
-    console.log(5%9);
-    console.log(28%9);
-    console.log(19%9);
-    console.log(15%9);
-    console.log(20%9);
-    console.log(33%9);
-    console.log(12%9);
-    console.log(17%9);
-    console.log(10%9);
+    // console.log(5%9);
+    // console.log(28%9);
+    // console.log(19%9);
+    // console.log(15%9);
+    // console.log(20%9);
+    // console.log(33%9);
+    // console.log(12%9);
+    // console.log(17%9);
+    // console.log(10%9);
     //console.log(lotr);
     //console.log(lotr.get('Hobbit'));
 }
@@ -55,4 +56,23 @@ main();
                         
                         
 // 17							
-// 8	9						
+// 8	9			
+
+
+
+
+//Question 04
+//IS THIS CORRECT?!?!???!
+
+function removeDuplicates(string) {
+    let hash = new hashMap();
+    let results = '';
+    for(let i=0; i<string.length; i++) {
+        hash.set(string[i],string[i]);
+    }
+    for(let items = 0; items < hash.length; items++) {
+        results += hash._hashTable[items].value;
+    }
+    console.log(results);
+}
+removeDuplicates('google');
